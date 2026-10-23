@@ -100,4 +100,5 @@ jobs:
             exit 0
           fi
           git commit -m 'Update domain lists and geosite.dat'
+          git pull --rebase origin "$GITHUB_REF_NAME"
           git push
