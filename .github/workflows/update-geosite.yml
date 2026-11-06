@@ -86,7 +86,7 @@ jobs:
             -outputname=geosite.dat
           test -s "$GITHUB_WORKSPACE/release/geosite.dat"
           cd "$GITHUB_WORKSPACE/release"
-          sha256sum geosite.dat > geosite.dat.sha256
+          sha256sum geosite.dat | cut -d ' ' -f 1 > geosite.dat.sha256
 
       - name: Commit changes
         shell: bash
